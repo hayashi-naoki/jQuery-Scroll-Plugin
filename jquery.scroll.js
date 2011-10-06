@@ -2,9 +2,9 @@
  * jquery.scroll.js
  * Copyright (c) 2011 KEYTON.CO,Ltd.
  * Dual licensed under MIT and GPL.
- * Date: 2011-6-9
+ * Date: 2011-10-6
  * @author Hayashi Naoki
- * @version 1.1.0
+ * @version 1.1.1
  * http://www.keyton-co.jp/
  */
 jQuery(function($){
