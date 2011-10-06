@@ -14,8 +14,6 @@ Gem::Specification.new do |s|
   s.files             = %w( readme.md Rakefile LICENSE )
   s.files            += Dir.glob("lib/**/*")
   s.files            += Dir.glob("bin/**/*")
-  s.files            += Dir.glob("man/**/*")
-  s.files            += Dir.glob("test/**/*")
 
 #  s.executables       = %w( github-markup )
   s.description       = <<desc
