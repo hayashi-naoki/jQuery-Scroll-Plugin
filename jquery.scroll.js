@@ -2,9 +2,9 @@
  * jquery.scroll.js
  * Copyright (c) 2011 KEYTON.CO,Ltd.
  * Dual licensed under MIT and GPL.
- * Date: 2011-10-6
+ * Date: 2011-10-17
  * @author Hayashi Naoki
- * @version 1.1.1
+ * @version 1.1.2
  * http://www.keyton-co.jp/
  */
 jQuery(function($){
@@ -16,9 +16,9 @@ jQuery(function($){
 		option.replace  = option.replace  || true;
 		var here = document.URL.split("#")[0];
 		return this.each(function(){
+			var thisId = '#'.$(this).attr('href').split("#")[1];
 			$(this).bind('click',function(e){
-				var id = e.currentTarget.hash;
-				var obj = $(id);
+				var obj = $(thisId);
 				var o_set = obj.offset() != null ? obj.offset() : {left:0,top:0};
 				el.animate(
 					{scrollTop:o_set.top,scrollLeft:o_set.left},
@@ -27,7 +27,7 @@ jQuery(function($){
 						easing:option.easing,
 						complete:function(){
 							el.scrollTop(o_set.top).scrollLeft(o_set.left).queue([]).stop();
-							if(option.replace){window.location.href=here+id};
+							if(option.replace){window.location.href=here+thisId};
 					 	}
 					}
 				);
